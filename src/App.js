@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Aqhi from './components/aqhi/Aqhi';
+import PublicTransit from './components/public-transit/PublicTransit';
+import Motorbike from './components/motorbike/MotorBike';
+import Flight from './components/flight/Flight';
+import Car from './components/car/Car';
+import Fuel from './components/fuel/Fuel';
+import Energy from './components/energy/Energy';
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Aqhi />
+      <PublicTransit />
+      <Motorbike  />
+      <Flight />
+      <Car />
+      <Fuel />
+      <Energy />
     </div>
   );
-}
+};
 
 export default App;
