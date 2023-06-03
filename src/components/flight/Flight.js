@@ -41,39 +41,39 @@ const Flight = () => {
   };
 
   return (
-    <div>
-      <div>
-        <label htmlFor="distance">Flight Distance (KM):</label>
-        <input
-          type="text"
-          id="distance"
-          value={distance}
-          onChange={(e) => setDistance(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="type">Type of Flight:</label>
-        <select
-          id="type"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <option value="">Select flight type</option>
-          {flightOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-      <button onClick={handleCalculate}>Calculate</button>
-      {carbonData && (
-        <div>
-          <p>Carbon: {carbonData.carbon}</p>
-          <p>Success: {carbonData.success.toString()}</p>
-        </div>
-      )}
+    <div className="container">
+  <div className="input-container">
+    <label htmlFor="distance" className="label">Flight Distance (KM):</label>
+    <input
+      type="text"
+      id="distance"
+      value={distance}
+      onChange={(e) => setDistance(e.target.value)}
+    />
+  </div>
+  <div className="input-container">
+    <label htmlFor="type" className="label">Type of Flight:</label>
+    <select
+      id="type"
+      value={type}
+      onChange={(e) => setType(e.target.value)}
+    >
+      <option value="">Select flight type</option>
+      {flightOptions.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  </div>
+  <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
+  {carbonData && (
+    <div className="result">
+      <p>Carbon: {carbonData.carbon}</p>
     </div>
+  )}
+</div>
+
   );
 };
 

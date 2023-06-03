@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Aqhi.css'
+// air quaity  health index 
 
 const Aqhi = () => {
   const [o3, setO3] = useState('');
@@ -33,42 +35,44 @@ const Aqhi = () => {
   };
 
   return (
-    <div>
-      <div>
-        <label htmlFor="o3">O3:</label>
-        <input
-          type="text"
-          id="o3"
-          value={o3}
-          onChange={(e) => setO3(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="no2">NO2:</label>
-        <input
-          type="text"
-          id="no2"
-          value={no2}
-          onChange={(e) => setNo2(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="pm">PM:</label>
-        <input
-          type="text"
-          id="pm"
-          value={pm}
-          onChange={(e) => setPm(e.target.value)}
-        />
-      </div>
-      <button onClick={handleCalculate}>Calculate</button>
-      {carbonData && (
-        <div>
-          <p>Carbon: {carbonData.carbon}</p>
-          {/* <p>Success: {carbonData.success.toString()}</p> */}
-        </div>
-      )}
+    <div className="container">
+      <h1>Carbon emission due to Ozone , Nitrate and Particulate matter emission</h1>
+    <div className="input-container">
+      <label htmlFor="o3" className="label">O3:</label>
+      <input
+        type="text"
+        id="o3"
+        value={o3}
+        onChange={(e) => setO3(e.target.value)}
+      />
     </div>
+    <div className="input-container">
+      <label htmlFor="no2" className="label">NO2:(ppb)</label>
+      <input
+        type="text"
+        id="no2"
+        value={no2}
+        onChange={(e) => setNo2(e.target.value)}
+      />
+    </div>
+    <div className="input-container">
+      <label htmlFor="pm" className="label">Particulate Matter (ug/m3):</label>
+      <input
+        type="text"
+        id="pm"
+        value={pm}
+        onChange={(e) => setPm(e.target.value)}
+      />
+    </div>
+    <button onClick={handleCalculate}>Calculate</button>
+    {carbonData && (
+      <div className="result">
+        <p>Carbon: {carbonData.carbon}</p>
+        {/* <p>Success: {carbonData.success.toString()}</p> */}
+      </div>
+    )}
+  </div>
+  
   );
 };
 

@@ -33,39 +33,39 @@ const Fuel = () => {
   };
 
   return (
-    <div>
-      <div>
-        <label htmlFor="type">Fuel Type:</label>
-        <select
-          id="type"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <option value="">Select fuel type</option>
-          {fuelOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="litres">Litres:</label>
-        <input
-          type="text"
-          id="litres"
-          value={litres}
-          onChange={(e) => setLitres(e.target.value)}
-        />
-      </div>
-      <button onClick={handleCalculate}>Calculate</button>
-      {carbonData && (
-        <div>
-          <p>Carbon: {carbonData.carbon}</p>
-          <p>Success: {carbonData.success.toString()}</p>
-        </div>
-      )}
+    <div className="container">
+  <div className="input-container">
+    <label htmlFor="type" className="label">Fuel Type:</label>
+    <select
+      id="type"
+      value={type}
+      onChange={(e) => setType(e.target.value)}
+    >
+      <option value="">Select fuel type</option>
+      {fuelOptions.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  </div>
+  <div className="input-container">
+    <label htmlFor="litres" className="label">Litres:</label>
+    <input
+      type="text"
+      id="litres"
+      value={litres}
+      onChange={(e) => setLitres(e.target.value)}
+    />
+  </div>
+  <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
+  {carbonData && (
+    <div className="result">
+      <p>Carbon: {carbonData.carbon}</p>
     </div>
+  )}
+</div>
+
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Energy.css';
 
 const energyOptions = [
   'Solar',
@@ -41,39 +42,40 @@ const Energy = () => {
   };
 
   return (
-    <div>
-      <div>
-        <label htmlFor="energy">Clean Energy Source:</label>
-        <select
-          id="energy"
-          value={energy}
-          onChange={(e) => setEnergy(e.target.value)}
-        >
-          <option value="">Select clean energy source</option>
-          {energyOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="consumption">Energy Consumption (KW):</label>
-        <input
-          type="text"
-          id="consumption"
-          value={consumption}
-          onChange={(e) => setConsumption(e.target.value)}
-        />
-      </div>
-      <button onClick={handleCalculate}>Calculate</button>
-      {carbonData && (
-        <div>
-          <p>Carbon: {carbonData.carbon}</p>
-          <p>Success: {carbonData.success.toString()}</p>
-        </div>
-      )}
+    <div className="container">
+  <div className="input-container">
+    <label htmlFor="energy" className="label">Clean Energy Source:</label>
+    <select
+      id="energy"
+      value={energy}
+      onChange={(e) => setEnergy(e.target.value)}
+    >
+      <option value="">Select clean energy source</option>
+      {energyOptions.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  </div>
+  <div className="input-container">
+    <label htmlFor="consumption" className="label">Energy Consumption (KW):</label>
+    <input
+      type="text"
+      id="consumption"
+      value={consumption}
+      onChange={(e) => setConsumption(e.target.value)}
+    />
+  </div>
+  <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
+  {carbonData && (
+    <div className="result">
+      <p>Carbon: {carbonData.carbon}</p>
+      <p>Success: {carbonData.success.toString()}</p>
     </div>
+  )}
+</div>
+
   );
 };
 

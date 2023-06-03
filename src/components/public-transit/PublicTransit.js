@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import './PublicTransit.css'
 const PublicTransit = () => {
   const [distance, setDistance] = useState('');
   const [type, setType] = useState('');
@@ -42,39 +42,39 @@ const PublicTransit = () => {
   ];
 
   return (
-    <div>
-      <div>
-        <label htmlFor="distance">Distance (KM):</label>
-        <input
-          type="text"
-          id="distance"
-          value={distance}
-          onChange={(e) => setDistance(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="type">Type of Transportation:</label>
-        <select
-          id="type"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <option value="">Select transportation type</option>
-          {transportationOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      </div>
-      <button onClick={handleCalculate}>Calculate</button>
-      {carbonData && (
-        <div>
-          <p>Carbon: {carbonData.carbon}</p>
-          <p>Success: {carbonData.success.toString()}</p>
-        </div>
-      )}
+    <div className="container">
+  <div className="input-container">
+    <label htmlFor="distance" className="label">Distance (KM):</label>
+    <input
+      type="text"
+      id="distance"
+      value={distance}
+      onChange={(e) => setDistance(e.target.value)}
+    />
+  </div>
+  <div className="input-container">
+    <label htmlFor="type" className="label">Type of Transportation:</label>
+    <select
+      id="type"
+      value={type}
+      onChange={(e) => setType(e.target.value)}
+    >
+      <option value="">Select transportation type</option>
+      {transportationOptions.map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  </div>
+  <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
+  {carbonData && (
+    <div className="result">
+      <p>Carbon: {carbonData.carbon}</p>
     </div>
+  )}
+</div>
+
   );
 };
 
