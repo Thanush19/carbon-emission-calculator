@@ -1,0 +1,143 @@
+*{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family:'Proza Libre' ;
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Proza Libre';
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Proza Libre';
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Proza Libre';
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-SemiBoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Proza Libre';
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Proza Libre';
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Proza Libre';
+  src: url('../../assets/fonts/Proza_Libre/ProzaLibre-ExtraBold.ttf') format('truetype');
+}
+
+  p{
+    font-family: 'Proza Libre', sans-serif;
+    font-weight: extra-bold;
+    
+  }
+  @media (max-width: 768px) {
+    .link {
+      width: 90%;
+    }
+  }
+  .home-container {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Add background color overlay if needed */
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  
+  .scenarios {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .link:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+    color: #fff;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+/* Home.css */
+.link button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.link button:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* Home.css */
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: floating 3s ease-in-out infinite;
+}
+/* Home.css */
+.Tagline {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  position: relative;
+
+
+}
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.heading:hover {
+  transform: scale(1.1);
+}
+ .greener {
+  position: relative;
+  z-index: 1;
+  -webkit-text-stroke: 3px green;
+
+}
