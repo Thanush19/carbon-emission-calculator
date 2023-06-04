@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Aqhi.css'
-// air quaity  health index 
+import bgGif from '../../assets/animations/aqhi.bg.gif'
+// air quaity  health index z
 
 const Aqhi = () => {
   const [o3, setO3] = useState('');
@@ -35,43 +36,49 @@ const Aqhi = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Carbon emission due to Ozone , Nitrate and Particulate matter emission</h1>
-    <div className="input-container">
-      <label htmlFor="o3" className="label">O3:</label>
-      <input
-        type="text"
-        id="o3"
-        value={o3}
-        onChange={(e) => setO3(e.target.value)}
-      />
-    </div>
-    <div className="input-container">
-      <label htmlFor="no2" className="label">NO2:(ppb)</label>
-      <input
-        type="text"
-        id="no2"
-        value={no2}
-        onChange={(e) => setNo2(e.target.value)}
-      />
-    </div>
-    <div className="input-container">
-      <label htmlFor="pm" className="label">Particulate Matter (ug/m3):</label>
-      <input
-        type="text"
-        id="pm"
-        value={pm}
-        onChange={(e) => setPm(e.target.value)}
-      />
-    </div>
-    <button onClick={handleCalculate}>Calculate</button>
-    {carbonData && (
-      <div className="result">
-        <p>Carbon: {carbonData.carbon}</p>
-        {/* <p>Success: {carbonData.success.toString()}</p> */}
+    <div className="container" >
+      <div className="video-background">
+        <img src={bgGif} alt="Background GIF" />
+
       </div>
-    )}
-  </div>
+      <div className="content-overlay">
+        <h1>Carbon emission due to Ozone, Nitrogen Di Oxide, and Particulate matter emission</h1>
+        <div className="input-container">
+          <label htmlFor="o3" className="label">O3:</label>
+          <input
+            type="text"
+            id="o3"
+            value={o3}
+            onChange={(e) => setO3(e.target.value)}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="no2" className="label">NO2:(ppb)</label>
+          <input
+            type="text"
+            id="no2"
+            value={no2}
+            onChange={(e) => setNo2(e.target.value)}
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="pm" className="label">Particulate Matter (ug/m3):</label>
+          <input
+            type="text"
+            id="pm"
+            value={pm}
+            onChange={(e) => setPm(e.target.value)}
+          />
+        </div>
+        <button onClick={handleCalculate}>Calculate</button>
+        {carbonData && (
+          <div className="result">
+            <p className=''>Carbon-Di-Oxide Emitted: ({carbonData.carbon})</p>
+            {/* <p>Success: {carbonData.success.toString()}</p> */}
+          </div>
+        )}
+      </div>
+    </div>
   
   );
 };
