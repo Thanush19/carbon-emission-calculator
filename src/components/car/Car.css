@@ -1,0 +1,9 @@
+.container background-image {
+opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .container {
+      background-size: contain;
+    }
+  }

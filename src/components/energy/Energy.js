@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Energy.css';
+import bg from '../../assets/animations/energy-bg-5.png'
 
 const energyOptions = [
   'Solar',
@@ -42,8 +43,7 @@ const Energy = () => {
   };
 
   return (
-    <div className="container">
-  <div className="input-container">
+<div className="container" style={{ backgroundImage: `url(${bg})` }}>    <div className="input-container">
     <label htmlFor="energy" className="label">Clean Energy Source:</label>
     <select
       id="energy"
@@ -70,10 +70,9 @@ const Energy = () => {
   <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
   {carbonData && (
     <div className="result">
-      <p>Carbon: {carbonData.carbon}</p>
-      <p>Success: {carbonData.success.toString()}</p>
+      <p>Carbon-Di-Oxide Emiited-: {carbonData.carbon}</p>
     </div>
-  )}
+  )} 
 </div>
 
   );

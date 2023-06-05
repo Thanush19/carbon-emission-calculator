@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import bg from '../../assets/animations/fuel-bg.png'
 
 const fuelOptions = ['Petrol', 'Diesel', 'LPG'];
 
@@ -33,8 +34,7 @@ const Fuel = () => {
   };
 
   return (
-    <div className="container">
-  <div className="input-container">
+<div className="container" style={{ backgroundImage: `url(${bg})` }}>    <div className="input-container">
     <label htmlFor="type" className="label">Fuel Type:</label>
     <select
       id="type"

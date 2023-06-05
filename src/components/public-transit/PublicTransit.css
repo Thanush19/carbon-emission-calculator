@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Proza Libre';
+    src: url('../../assets/fonts/Proza_Libre/ProzaLibre-ExtraBold.ttf') format('truetype');
+  }
+  
+  .container {
+    background-image: url('../../assets/photos/public transport.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Add other styles for the container */
+    font-family: 'Proza Libre', sans-serif;
+    font-size: 2rem;
+  }
+  .input-container {
+    /* Add your other styles for the input container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+input{
+    padding: 8px;
+    border: 1px solid #cccccc85;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out background-color;
+    border-radius:2rem;
+    background: rgba(221, 215, 215, 0.7);
+
+  }
+  .input-container select,option {
+    /* Add your other styles for the select element */
+    padding: 8px;
+    border: 1px solid #cccccc85;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out background-color;
+    border-radius:2rem;
+    background: rgba(221, 215, 215, 0.7);
+
+
+  }
+  
+  .input-container select:hover,
+  .input-container select:focus {
+    border-bottom: 5px solid #010000;
+    outline: none;
+    background-color: rgba(221, 215, 215);
+    ;
+  }
+  button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, );
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 2rem;
+  }
+  button:hover {
+    background-color: #1f3b2c;
+    color: #fff;
+  }
+  .label,.result{
+    background: rgba(221, 215, 215, 0.7);
+    border-radius:25px;
+    border: #010000 solid 1px;
+    transition: background-color border-bottom ;
+
+    
+}
+.label:focus ,
+.label:hover,
+.result:focus ,
+.result:hover{
+    border-bottom: 5px solid #010000;
+    background-color: rgba(255, 255, 255, );
+}

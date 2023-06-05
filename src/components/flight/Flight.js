@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import bg from '../../assets/animations/fligth-bg-2.png';
 const flightOptions = [
   'DomesticFlight',
   'ShortEconomyClassFlight',
@@ -41,7 +41,7 @@ const Flight = () => {
   };
 
   return (
-    <div className="container">
+<div className="container" style={{ backgroundImage: `url(${bg})` }}>
   <div className="input-container">
     <label htmlFor="distance" className="label">Flight Distance (KM):</label>
     <input

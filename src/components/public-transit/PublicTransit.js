@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './PublicTransit.css'
+import bg from '../../assets/photos/public transport.webp'
 const PublicTransit = () => {
   const [distance, setDistance] = useState('');
   const [type, setType] = useState('');
@@ -42,8 +43,7 @@ const PublicTransit = () => {
   ];
 
   return (
-    <div className="container">
-  <div className="input-container">
+<div className="container" style={{ backgroundImage: `url(${bg})` }}>  <div className="input-container">
     <label htmlFor="distance" className="label">Distance (KM):</label>
     <input
       type="text"
@@ -70,7 +70,7 @@ const PublicTransit = () => {
   <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
   {carbonData && (
     <div className="result">
-      <p>Carbon: {carbonData.carbon}</p>
+      <p>Carbon-Di-Oxide Emitted: {carbonData.carbon}</p>
     </div>
   )}
 </div>

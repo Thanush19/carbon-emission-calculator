@@ -22,27 +22,72 @@ const Home = () => {
 
       <p className="scenarios float">Calculate carbon emission in the following scenarios:</p>
       <div className="links-container">
-        <Link to="/aqhi" className="link">
-          <button>Calculate Carbon emission due to Ozone, Nitrate, and Particulate matter emission</button>
-        </Link>
-        <Link to="/public-transit" className="link">
-          <button>Calculate Carbon emission due to various public transportation</button>
-        </Link>
-        <Link to="/motorbike" className="link">
-          <button>Calculate Carbon emission due to various Varients of  Motorbikes</button>
-        </Link>
-        <Link to="/flight" className="link">
-          <button>Calculate Carbon emission due various  to Flight</button>
-        </Link>
-        <Link to="/car" className="link">
-          <button>Calculate Carbon emission due to various Varients of Car</button> 
-        </Link>
-        <Link to="/fuel" className="link">
-          <button>Calculate Carbon emission due to various Fuel</button>
-        </Link>
-        <Link to="/energy" className="link">
-          <button>Calculate Carbon emission due to various  Energy resources</button>
-        </Link>
+        <div className="links">
+          <Link to="/aqhi" className="link">
+            <button>Calculate Carbon emission due to Ozone, Nitrate, and Particulate matter emission</button>
+          </Link>
+
+        </div>
+      
+        <div className="links">
+          <Link to="/public-transit" className="link">
+            <button>Calculate Carbon emission due to various public transportation</button>
+          </Link>
+
+        </div>
+
+       
+        <div className="links">
+          <Link to="/motorbike" className="link">
+            <button>Calculate Carbon emission due to various Varients of  Motorbikes</button>
+          </Link>
+
+
+        </div>
+
+        
+        <div className="links">
+          <Link to="/flight" className="link">
+            <button>Calculate Carbon emission due various  to Flight</button>
+          </Link>
+
+          
+        </div>
+
+       
+        {/* <div className="links">
+          <Link to="/flight" className="link">
+            <button>Calculate Carbon emission due various  to Flight</button>
+          </Link>
+            
+        </div> */}
+
+        <div className="links">
+          <Link to="/car" className="link">
+            <button>Calculate Carbon emission due to various Varients of Car</button> 
+          </Link>
+          
+        </div>
+
+       
+        <div className="links">
+           <Link to="/fuel" className="link">
+            <button>Calculate Carbon emission due to various Fuel</button>
+          </Link>
+
+
+        </div>
+
+       
+        <div className="links">
+          <Link to="/energy" className="link">
+            <button>Calculate Carbon emission due to various  Energy resources</button>
+          </Link>
+
+
+        </div>
+
+        
       </div>
     </div>
     </div>

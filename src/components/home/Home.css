@@ -135,9 +135,9 @@
 .heading:hover {
   transform: scale(1.1);
 }
- .greener {
+.Tagline .greener {
   position: relative;
   z-index: 1;
-  -webkit-text-stroke: 3px green;
+  -webkit-text-stroke: 2px green;
 
 }

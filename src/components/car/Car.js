@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import bg from '../../assets/photos/car-bg-1.gif';
 
 const carOptions = [
   'SmallDieselCar',
@@ -53,8 +54,7 @@ const Car = () => {
   };
 
   return (
-    <div className="container">
-  <div className="input-container">
+<div className="container" style={{ backgroundImage: `url(${bg})` }}>  <div className="input-container">
     <label htmlFor="distance" className="label">Distance (KM):</label>
     <input
       type="text"
