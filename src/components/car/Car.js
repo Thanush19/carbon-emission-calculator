@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import bg from '../../assets/photos/car-bg-1.gif';
+import bg from '../../assets/animations/car-bg.png';
 
 const carOptions = [
   'SmallDieselCar',
@@ -54,12 +54,16 @@ const Car = () => {
   };
 
   return (
-<div className="container" style={{ backgroundImage: `url(${bg})` }}>  <div className="input-container">
+<div className="container" >  
+<div className="background-image" style={{ backgroundImage: `url(${bg})` }}></div>
+
+<div className="input-container">
     <label htmlFor="distance" className="label">Distance (KM):</label>
     <input
       type="text"
       id="distance"
       value={distance}
+      placeholder='Enter distance in KM'
       onChange={(e) => setDistance(e.target.value)}
     />
   </div>
@@ -81,7 +85,7 @@ const Car = () => {
   <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
   {carbonData && (
     <div className="result">
-      <p>Carbon: {carbonData.carbon}</p>
+      <p>Carbon-Di-Oxide Emitted:{carbonData.carbon}</p>
     </div>
   )}
 </div>

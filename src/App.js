@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
-import IntroGif from './components/IntroGif';
+import IntroGif from './components/introgif/IntroGif';
 import Aqhi from './components/aqhi/Aqhi';
 import PublicTransit from './components/public-transit/PublicTransit';
 import Motorbike from './components/motorbike/MotorBike';

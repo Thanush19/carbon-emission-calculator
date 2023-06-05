@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import introGif from '../../src/assets/animations/intro.gif';
-
+// import introGif from '../../src/assets/animations/intro.gif';
+import  introGif from '../../assets/animations/intro.gif'
+import './IntroGif.css'
 const IntroGif = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -26,6 +27,8 @@ const IntroGif = () => {
         transition: 'opacity 1s ease-in-out',
         background: `url(${introGif}) no-repeat center center fixed `,
         backgroundSize: 'cover',
+        backgroundAttachment: 'scroll', // Added for mobile responsiveness
+
       }}
     />
   );

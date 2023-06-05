@@ -16,3 +16,13 @@
         height: 100%;
     };
 }
+@media (max-width: 520px) {
+    .content {
+      padding: 1rem;
+    }
+    
+    .background-image {
+      background-size: contain;
+      background-position: center;
+    }
+  }

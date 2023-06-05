@@ -48,6 +48,7 @@ const Flight = () => {
       type="text"
       id="distance"
       value={distance}
+      placeholder='Enter distance in KM'
       onChange={(e) => setDistance(e.target.value)}
     />
   </div>
@@ -69,7 +70,7 @@ const Flight = () => {
   <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
   {carbonData && (
     <div className="result">
-      <p>Carbon: {carbonData.carbon}</p>
+      <p>CO2 emitted: {carbonData.carbon}</p>
     </div>
   )}
 </div>

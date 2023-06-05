@@ -62,6 +62,7 @@ const Energy = () => {
     <label htmlFor="consumption" className="label">Energy Consumption (KW):</label>
     <input
       type="text"
+      placeholder='Enter energy consumption in KW'
       id="consumption"
       value={consumption}
       onChange={(e) => setConsumption(e.target.value)}

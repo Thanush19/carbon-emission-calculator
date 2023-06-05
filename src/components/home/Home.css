@@ -44,7 +44,13 @@
   .home-container {
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    height: 100vh;
+ 
+ 
+
+    z-index: 1;
+
+
   }
   
   .content-container {
@@ -140,4 +146,14 @@
   z-index: 1;
   -webkit-text-stroke: 2px green;
 
+}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  margin-top: 1rem;
 }

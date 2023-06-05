@@ -52,6 +52,7 @@ const Fuel = () => {
   <div className="input-container">
     <label htmlFor="litres" className="label">Litres:</label>
     <input
+    placeholder='Enter litres'
       type="text"
       id="litres"
       value={litres}
@@ -61,7 +62,7 @@ const Fuel = () => {
   <button className="calculate-button" onClick={handleCalculate}>Calculate</button>
   {carbonData && (
     <div className="result">
-      <p>Carbon: {carbonData.carbon}</p>
+      <p>CO2 Emitted: {carbonData.carbon}</p>
     </div>
   )}
 </div>

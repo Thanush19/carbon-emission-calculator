@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './PublicTransit.css'
-import bg from '../../assets/photos/public transport.webp'
+import bg from '../../assets/animations/pub-trans-bg.png'
 const PublicTransit = () => {
   const [distance, setDistance] = useState('');
   const [type, setType] = useState('');
@@ -43,12 +43,17 @@ const PublicTransit = () => {
   ];
 
   return (
-<div className="container" style={{ backgroundImage: `url(${bg})` }}>  <div className="input-container">
+<div className="container">
+    <div className="background-image" style={{ backgroundImage: `url(${bg})` }}>
+      
+    </div>
+    <div className="input-container">
     <label htmlFor="distance" className="label">Distance (KM):</label>
     <input
       type="text"
       id="distance"
       value={distance}
+      placeholder='Enter distance in KM'
       onChange={(e) => setDistance(e.target.value)}
     />
   </div>

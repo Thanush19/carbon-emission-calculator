@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import bg from '../../assets/animations/bike-bg.png'
+import bg from '../../assets/animations/bike-3.png'
 
 const motorbikeOptions = ['SmallMotorBike', 'MediumMotorBike', 'LargeMotorBike'];
 
@@ -41,6 +41,7 @@ const Motorbike = () => {
       type="text"
       id="distance"
       value={distance}
+      placeholder='Enter distance in KM'
       onChange={(e) => setDistance(e.target.value)}
     />
   </div>
